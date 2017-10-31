@@ -1,10 +1,9 @@
 cask 'stark' do
-  version '1.0.0'
-  sha256 '4ca746d592bace64bb20d1ca20d0bed6751dd853b2ff74cc86ca3233b4b50246'
-  url 'https://s3.amazonaws.com/stark-builds/stark-1.0.0.zip'
+  version '1.0.1'
+  sha256 'e1493bed662ff4dd56cf62f98e736d7258c3132903cc2180311337b70251ca6c'
+  url 'https://s3.amazonaws.com/stark-builds/stark-1.0.1.zip'
 
   name 'Stark'
-  homepage 'https://usestark.com'
 
   accessibility_access true
 
