@@ -1,4 +1,4 @@
-class ReleaseKit < Formula
+class Releasekit < Formula
   desc "Create or update GitHub releases based on closed issues and/or merged pull requests"
   homepage "https://github.com/tombell/releasekit"
   url "https://s3.amazonaws.com/releasekit-builds/releasekit-v0.1.1.zip"
