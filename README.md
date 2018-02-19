@@ -1,6 +1,6 @@
 # Homebrew Cask Formulae
 
-A [Homebrew tap][brew-tap] for various projects.
+A [Homebrew tap][brew-tap] for formulae and casks for some of [my tools][tombell].
 
 ## Usage
 
@@ -8,14 +8,19 @@ Tap this repository:
 
     brew tap tombell/formulae
 
-Install the packages it contains like any other Homebrew cask package:
+## Formulae
 
-    brew cask install stark
-    brew install coin
+Install with `brew install`.
 
-## Packages
+- `coin`
+- `prettytest`
+- `releasekit`
 
-  - `stark` is my window and application management app
-  - `coin` is my cryptocurrency price CLI app
+## Casks
+
+Install with `brew cask install`.
+
+- `stark`
 
 [brew-tap]: https://github.com/Homebrew/brew/blob/master/docs/brew-tap.md
+[tombell]: https://github.com/tombell
