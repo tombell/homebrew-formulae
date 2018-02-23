@@ -11,7 +11,7 @@ class Coin < Formula
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/tombell/coin").install buildpath.children
     cd "src/github.com/tombell/coin" do
-      system "go", "build", "-o", bin/"coin"
+      system "go", "build", "-o", bin/"coin", "cmd/coin"
       prefix.install_metafiles
     end
   end
