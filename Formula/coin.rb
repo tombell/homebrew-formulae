@@ -1,5 +1,5 @@
 class Coin < Formula
-  desc "Command line app to get cryptocurrency price information from CoinMarketCap"
+  desc "Command-line app to get cryptocurrency price info"
   homepage "https://github.com/tombell/coin"
 
   url "https://s3.amazonaws.com/coin-builds/coin-v0.0.4.zip"
