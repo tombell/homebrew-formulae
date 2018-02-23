@@ -1,15 +1,23 @@
 class Prettytest < Formula
-  desc "Adds color to the output of `go test` on macOS or Linux systems"
+  desc "Pipe output of `go test` to add color"
   homepage "https://github.com/tombell/prettytest"
+  url "https://github.com/tombell/prettytest/archive/v0.0.2.tar.gz"
+  sha256 "c14dcc718f683b7f4b61b1025ef11fc05aa1b0ceccfc07909ed9465a5cacbed0"
+  head "https://github.com/tombell/prettytest.git"
 
-  url "https://s3.amazonaws.com/prettytest-builds/prettytest-v0.0.1.zip"
-  sha256 "87ee737129100425d21793bb3ae4f8cc873c4fa759f908796c6327fd33cb6e59"
+  depends_on "go" => :build
 
   def install
-    bin.install "prettytest"
+    ENV["GOPATH"] = buildpath
+    (buildpath/"src/github.com/tombell/prettytest").install buildpath.children
+    cd "src/github.com/tombell/prettytest" do
+      system "go", "build", "-o", bin/"prettytest", "./cmd/prettytest"
+      prefix.install_metafiles
+    end
   end
 
   test do
-    system "#{bin}/prettytest", "-h"
+    # TODO
+    # system "#{bin}/prettytest"
   end
 end
