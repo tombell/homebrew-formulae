@@ -17,7 +17,7 @@ class Releasekit < Formula
   end
 
   test do
-    # TODO
+    # TODO
     # system "#{bin}/releasekit"
   end
 end
