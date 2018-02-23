@@ -1,16 +1,22 @@
 class Coin < Formula
   desc "Command-line app to get cryptocurrency price info"
   homepage "https://github.com/tombell/coin"
+  url "https://github.com/tombell/coin/archive/v0.0.5.tar.gz"
+  sha256 "3b615c910df539da92b87ac5801aaa5cc252adc1bd15cf661c33238170f6c73a"
+  head "https://github.com/tombell/coin.git"
 
-  url "https://s3.amazonaws.com/coin-builds/coin-v0.0.4.zip"
-  sha256 "196cea76f3bab2291174a8f125fcea153a7b438fe9f2c1b4b3bf1b5d8422bf34"
+  depends_on "go" => :build
 
   def install
-    bin.install "coin"
+    ENV["GOPATH"] = buildpath
+    (buildpath/"src/github.com/tombell/coin").install buildpath.children
+    cd "src/github.com/tombell/coin" do
+      system "go", "build", "-o", bin/"coin"
+      prefix.install_metafiles
+    end
   end
 
   test do
-    system "#{bin}/coin", "-h"
-    assert_match $?, 2
+    system "#{bin}/coin"
   end
 end
