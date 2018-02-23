@@ -11,5 +11,6 @@ class Coin < Formula
 
   test do
     system "#{bin}/coin", "-h"
+    assert_match $?, 2
   end
 end
