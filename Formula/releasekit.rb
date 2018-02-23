@@ -5,6 +5,8 @@ class Releasekit < Formula
   sha256 "02fff2cdb0f6f37f749133797d8dfc27a36cf4d65458258ef56a7079ac975f3f"
   head "https://github.com/tombell/releasekit.git"
 
+  depends_on "go" => :build
+
   def install
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/tombell/releasekit").install buildpath.children
