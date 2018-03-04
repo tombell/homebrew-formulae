@@ -6,7 +6,7 @@ class Lock < Formula
   def install
     system "mkdir", "-p", "bin"
     system "clang", "-framework", "login", "-F", "/System/Library/PrivateFrameworks", "--output=bin/lock", "lock.c"
-    prefix.install_metafiles
+    prefix.install "bin/lock"
   end
 
   test do
