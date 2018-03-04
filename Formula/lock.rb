@@ -4,7 +4,7 @@ class Lock < Formula
   head "https://github.com/tombell/lock.git"
 
   def install
-    system "make", "build"
+    system "clang", "-framework", "login", "-F", "/System/Library/PrivateFrameworks", "--output=bin/lock", "lock.c"
     prefix.install_metafiles
   end
 
