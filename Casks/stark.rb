@@ -10,7 +10,7 @@ cask 'stark' do
   app 'Stark.app'
 
   zap delete: [
-    '~/Library/LaunchAgents/com.rustyrobots.Stark.plist',
+    '~/Library/LaunchAgents/co.rustyrobots.Stark.plist',
     '~/Library/Preferences/co.rustyrobots.Stark.plist',
   ]
 end
