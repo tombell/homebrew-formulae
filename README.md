@@ -13,6 +13,7 @@ Tap this repository:
 Install with `brew install`.
 
 - `coin`
+- `lock`
 - `prettytest`
 - `releasekit`
 
