@@ -19,7 +19,7 @@ class Coin < Formula
       system "go", "build",
              "-o", bin/"coin",
              "-ldflags", ldflags.join(" "),
-             "./cmd/coin"
+             "github.com/tombell/coin/cmd/coin"
       prefix.install_metafiles
     end
   end
