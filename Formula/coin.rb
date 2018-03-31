@@ -1,9 +1,9 @@
 class Coin < Formula
   desc "Command-line app to get cryptocurrency price info"
   homepage "https://github.com/tombell/coin"
-  url "https://github.com/tombell/coin/archive/v0.0.5.tar.gz"
-  sha256 "3b615c910df539da92b87ac5801aaa5cc252adc1bd15cf661c33238170f6c73a"
-  head "https://github.com/tombell/coin.git"
+  url "https://github.com/tombell/coin.git",
+    :tag => "v0.0.6",
+    :revision => "e42cdb1cf741ce372b7d107f3a9063f54da33327"
 
   depends_on "go" => :build
 
@@ -11,7 +11,15 @@ class Coin < Formula
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/tombell/coin").install buildpath.children
     cd "src/github.com/tombell/coin" do
-      system "go", "build", "-o", bin/"coin", "./cmd/coin"
+      commit = Utils.popen_read("git rev-parse --short HEAD").chomp
+      ldflags = [
+        "-X main.Version=#{version}",
+        "-X main.Commit=#{commit}",
+      ]
+      system "go", "build",
+             "-o", bin/"coin",
+             "-ldflags", ldflags.join(" "),
+             "./cmd/coin"
       prefix.install_metafiles
     end
   end

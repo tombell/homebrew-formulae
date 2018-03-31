@@ -20,7 +20,6 @@ class Lodge < Formula
              "-o", bin/"lodge",
              "-ldflags", ldflags.join(" "),
              "github.com/tombell/lodge/cmd/lodge"
-
       prefix.install_metafiles
     end
   end
