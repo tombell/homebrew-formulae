@@ -18,6 +18,7 @@ class Prettytest < Formula
       ]
       system "go", "build",
              "-o", bin/"prettytest",
+             "-ldflags", ldflags.join(" "),
              "github.com/tombell/prettytest/cmd/prettytest"
       prefix.install_metafiles
     end
