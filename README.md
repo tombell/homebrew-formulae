@@ -14,8 +14,10 @@ Install with `brew install`.
 
 - `coin`
 - `lock`
+- `lodge`
 - `prettytest`
 - `releasekit`
+- `tldr`
 
 ## Casks
 
