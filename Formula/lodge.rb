@@ -2,8 +2,8 @@ class Lodge < Formula
   desc "Command-line app to embed binary file data into Go files"
   homepage "https://github.com/tombell/lodge"
   url "https://github.com/tombell/lodge.git",
-    :tag => "v0.0.1",
-    :revision => "d8ad98e6d557c282eb16c8782239cb0aedf69b9a"
+    :tag => "v0.0.3",
+    :revision => "2b3591e71a2ca0e335d349a690e37546c71ac974"
 
   depends_on "go" => :build
 
