@@ -2,8 +2,8 @@ class Coin < Formula
   desc "Command-line app to get cryptocurrency price info"
   homepage "https://github.com/tombell/coin"
   url "https://github.com/tombell/coin.git",
-    :tag => "v0.1.1",
-    :revision => "93fdbc1ecd421c95ea071684e73f914a3411e1b5"
+    :tag => "v0.1.2",
+    :revision => "0a4c0e867f7b52468dec0f68c9b11fb7e72a2203"
 
   depends_on "go" => :build
 
