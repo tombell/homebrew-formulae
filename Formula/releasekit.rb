@@ -2,8 +2,8 @@ class Releasekit < Formula
   desc "Create GitHub releases from closed issues and pull requests"
   homepage "https://github.com/tombell/releasekit"
   url "https://github.com/tombell/releasekit.git",
-    :tag => "v0.2.1",
-    :revision => "05e0b7a8c2d4a3eef2d415c5184459c3a99f4c8f"
+    :tag => "v0.3.0",
+    :revision => "b0d3d5c75c38622185ef0a136e56d0e1d9914ebf"
 
   depends_on "go" => :build
 
