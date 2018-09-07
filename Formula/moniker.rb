@@ -9,6 +9,7 @@ class Moniker < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "on"
     (buildpath/"src/github.com/tombell/moniker").install buildpath.children
     cd "src/github.com/tombell/moniker" do
       commit = Utils.popen_read("git rev-parse --short HEAD").chomp
