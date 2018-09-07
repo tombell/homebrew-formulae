@@ -1,4 +1,4 @@
-class Lodge < Formula
+class Moniker < Formula
   desc "Command-line app to rename MP3 files based on ID3 tags"
   homepage "https://github.com/tombell/moniker"
   url "https://github.com/tombell/moniker.git",
