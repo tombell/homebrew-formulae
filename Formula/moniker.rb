@@ -2,8 +2,8 @@ class Moniker < Formula
   desc "Command-line app to rename MP3 files based on ID3 tags"
   homepage "https://github.com/tombell/moniker"
   url "https://github.com/tombell/moniker.git",
-    :tag => "v0.0.2",
-    :revision => "6ddaab194c0487367fc191de38f7fab57b6953b3"
+    :tag => "v0.0.3",
+    :revision => "b98ea1f17403b06bda098082135041bdfdc12c90"
 
   depends_on "go" => :build
 
