@@ -2,8 +2,8 @@ class Tldr < Formula
   desc "Simplified and community-driven man pages"
   homepage "https://github.com/tombell/tldr"
   url "https://github.com/tombell/tldr.git",
-    :tag => "v0.1.0",
-    :revision => "58cadc96144551d3253903f27adce51b98d0a476"
+    :tag => "v0.1.2",
+    :revision => "5844cb1c23526350ba1872d6ac98c400e1e0b9d4"
 
   depends_on "go" => :build
   depends_on "lodge" => :build
