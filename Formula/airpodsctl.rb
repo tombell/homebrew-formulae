@@ -1,4 +1,4 @@
-class AirPodsCtl < Formula
+class Airpodsctl < Formula
   desc "Connect/Disconnect your AirPods from the command line"
   homepage "https://github.com/tombell/airpodsctl"
   url "https://github.com/tombell/airpodsctl/archive/v1.0.0.tar.gz"
