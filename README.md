@@ -12,12 +12,11 @@ Tap this repository:
 
 Install with `brew install`.
 
-- `coin`
 - `lock`
-- `lodge`
+- `moniker`
 - `prettytest`
 - `releasekit`
-- `tldr`
+- `zengarden`
 
 ## Casks
 
