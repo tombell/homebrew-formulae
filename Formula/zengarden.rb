@@ -20,7 +20,7 @@ class Zengarden < Formula
       system "go", "build", "-mod=vendor",
              "-o", bin/"zg",
              "-ldflags", ldflags.join(" "),
-             "github.com/tombell/moniker/cmd/zg"
+             "github.com/tombell/zengarden/cmd/zg"
       prefix.install_metafiles
     end
   end
