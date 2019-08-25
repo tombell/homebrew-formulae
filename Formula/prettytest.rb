@@ -2,8 +2,8 @@ class Prettytest < Formula
   desc "Pipe output of `go test` to add color"
   homepage "https://github.com/tombell/prettytest"
   url "https://github.com/tombell/prettytest.git",
-    :tag => "v0.0.5",
-    :revision => "80dd4bb0eb6d788c074fa8a10b7ea92193b38409"
+    :tag => "v0.0.7",
+    :revision => "636f491a447dfc23af60c8b98a832b8f974ed146"
 
   depends_on "go" => :build
 
