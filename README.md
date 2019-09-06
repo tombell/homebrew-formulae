@@ -22,7 +22,7 @@ Install with `brew install`.
 
 Install with `brew cask install`.
 
-- None
+- `stark`
 
 [brew-tap]: https://github.com/Homebrew/brew/blob/master/docs/brew-tap.md
 [tombell]: https://github.com/tombell
