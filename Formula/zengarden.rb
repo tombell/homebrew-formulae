@@ -2,8 +2,8 @@ class Zengarden < Formula
   desc "Super minimal and opinionated static site generator"
   homepage "https://github.com/tombell/zengarden"
   url "https://github.com/tombell/zengarden.git",
-    :tag => "v0.0.13",
-    :revision => "79af101e7af68fad00df376222d2200944054e0e"
+    :tag => "v0.0.14",
+    :revision => "bb351b19f4420a2a9b0e1a3371e0d0e681f36409"
 
   depends_on "go" => :build
 
