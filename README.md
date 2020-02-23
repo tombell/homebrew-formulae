@@ -15,7 +15,6 @@ Install with `brew install`.
 - `lock`
 - `moniker`
 - `prettytest`
-- `releasekit`
 - `zengarden`
 
 ## Casks
