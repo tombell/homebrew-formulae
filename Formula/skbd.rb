@@ -6,6 +6,12 @@ class Skbd < Formula
       :revision => "5131a2085928ec0bfc6b574b6a94d1697aaef8f5"
   head "https://github.com/tombell/skbd.git"
 
+  bottle do
+    root_url "https://skbd-builds.s3.amazonaws.com"
+    cellar :any_skip_relocation
+    sha256 "4b7430ddbeb64d0e07357ce6252563d90bdb8cf6c6cced624dba37678f60bd63" => :catalina
+  end
+
   depends_on :xcode => :build
 
   depends_on :macos => :catalina
