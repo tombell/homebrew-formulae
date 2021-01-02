@@ -14,8 +14,8 @@ class Moniker < Formula
     cd "src/github.com/tombell/moniker" do
       commit = Utils.popen_read("git rev-parse --short HEAD").chomp
       ldflags = [
-        "-X main.Version=#{version}",
-        "-X main.Commit=#{commit}",
+        "-X main.version=#{version}",
+        "-X main.commit=#{commit}",
       ]
       system "go", "build", "-mod=vendor",
              "-o", bin/"moniker",
