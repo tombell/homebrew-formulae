@@ -2,19 +2,18 @@ class Skbd < Formula
   desc "Stark Keybind Daemon"
   homepage "https://github.com/tombell/skbd"
   url "https://github.com/tombell/skbd.git",
-      :tag => "v0.0.3",
-      :revision => "5131a2085928ec0bfc6b574b6a94d1697aaef8f5"
+      tag:      "v0.0.3",
+      revision: "5131a2085928ec0bfc6b574b6a94d1697aaef8f5"
   head "https://github.com/tombell/skbd.git"
 
   bottle do
     root_url "https://skbd-builds.s3.amazonaws.com"
-    cellar :any_skip_relocation
-    sha256 "4b7430ddbeb64d0e07357ce6252563d90bdb8cf6c6cced624dba37678f60bd63" => :catalina
+    sha256 cellar: :any_skip_relocation, catalina: "4b7430ddbeb64d0e07357ce6252563d90bdb8cf6c6cced624dba37678f60bd63"
   end
 
-  depends_on :xcode => :build
+  depends_on xcode: :build
 
-  depends_on :macos => :catalina
+  depends_on macos: :catalina
 
   def install
     (var/"log/skbd").mkpath
@@ -22,7 +21,7 @@ class Skbd < Formula
     bin.install "#{buildpath}/.build/release/skbd"
   end
 
-  plist_options :manual => "skbd"
+  plist_options manual: "skbd"
 
   def plist
     <<~EOS
