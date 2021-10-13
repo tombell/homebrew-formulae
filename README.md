@@ -13,9 +13,7 @@ Tap this repository:
 Install with `brew install`.
 
 - `lock`
-- `moniker`
-- `prettytest`
-- `zengarden`
+- `skbd`
 
 ## Casks
 
