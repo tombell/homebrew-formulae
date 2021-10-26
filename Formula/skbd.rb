@@ -3,8 +3,7 @@ class Skbd < Formula
   homepage "https://github.com/tombell/skbd"
   url "https://github.com/tombell/skbd.git",
       tag:      "v0.0.3",
-      revision: "5131a2085928ec0bfc6b574b6a94d1697aaef8f5",
-      branch:   "main"
+      revision: "5131a2085928ec0bfc6b574b6a94d1697aaef8f5"
   head "https://github.com/tombell/skbd.git", branch: "main"
 
   bottle do
