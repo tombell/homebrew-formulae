@@ -2,8 +2,8 @@ class Skbd < Formula
   desc "Stark Keybind Daemon"
   homepage "https://github.com/tombell/skbd"
   url "https://github.com/tombell/skbd.git",
-      tag:      "v0.0.3",
-      revision: "5131a2085928ec0bfc6b574b6a94d1697aaef8f5"
+      tag:      "v0.0.4",
+      revision: "d42d61957fd82424496118a173098d1edbc04a4e"
   head "https://github.com/tombell/skbd.git", branch: "main"
 
   bottle do
