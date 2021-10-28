@@ -1,18 +1,10 @@
 class Skbd < Formula
   desc "Stark Keybind Daemon"
   homepage "https://github.com/tombell/skbd"
-  url "https://github.com/tombell/skbd.git",
-      tag:      "v0.0.4",
-      revision: "d42d61957fd82424496118a173098d1edbc04a4e"
+  url "https://github.com/tombell/skbd.git", tag: "v0.0.6", revision: "92f116dc734b6e5a1f3630b817e6e6e8cae17909"
   head "https://github.com/tombell/skbd.git", branch: "main"
 
-  bottle do
-    root_url "https://skbd-builds.s3.amazonaws.com"
-    sha256 cellar: :any_skip_relocation, monterey: "9c7e2c19394265aea327ea88768014e91d94e8b018bbdd4a7710490955253821"
-  end
-
   depends_on xcode: :build
-
   depends_on macos: :monterey
 
   def install
@@ -38,7 +30,7 @@ class Skbd < Formula
         <key>EnvironmentVariables</key>
         <dict>
           <key>PATH</key>
-          <string>#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+          <string>#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin</string>
         </dict>
         <key>RunAtLoad</key>
         <true/>
