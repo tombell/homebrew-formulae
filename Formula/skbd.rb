@@ -8,6 +8,7 @@ class Skbd < Formula
   depends_on macos: :monterey
 
   bottle do
+    root_url "https://skbd-builds.s3.amazonaws.com"
     rebuild 1
     sha256 cellar: :any_skip_relocation, monterey: "0e5471ba2d77a4221e0b56659a9f75efed63348d495f1602888b09073f4d7497"
   end
