@@ -7,6 +7,11 @@ class Skbd < Formula
   depends_on xcode: :build
   depends_on macos: :monterey
 
+  bottle do
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, monterey: "0e5471ba2d77a4221e0b56659a9f75efed63348d495f1602888b09073f4d7497"
+  end
+
   def install
     (var/"log/skbd").mkpath
     system "make", "package"
