@@ -1,8 +1,8 @@
 cask 'stark' do
-  version '2.1.2'
-  sha256 '3e1b0fa05a7460c98b68ce04ba3651414ae312054b4ba37ef66ef0bbf077e9f0'
+  version '2.1.3'
+  sha256 '65ccaec11e8671f4a023f0881abfead9b28702bbafd1aa4069094f5f7b1e956d'
 
-  url 'https://s3.amazonaws.com/stark-builds/stark-2.1.2.zip'
+  url 'https://s3.amazonaws.com/stark-builds/stark-2.1.3.zip'
   name 'Stark'
   homepage 'https://github.com/tombell/stark'
 
