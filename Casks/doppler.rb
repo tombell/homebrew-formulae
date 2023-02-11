@@ -1,5 +1,5 @@
 cask 'doppler' do
-  version '2.0.9'
+  version '2.1.4'
 
   url 'https://updates.brushedtype.co/doppler-macos/download'
   name 'Doppler'
