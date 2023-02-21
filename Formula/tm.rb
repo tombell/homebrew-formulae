@@ -10,11 +10,20 @@ class Tm < Formula
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/tombell/tm").install buildpath.children
     cd "src/github.com/tombell/tm" do
+      commit = `git rev-parse HEAD | cut -c -8`.chomp
+
       system "go", "build",
              "-o", bin/"tm",
+             "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
              "github.com/tombell/tm/cmd/tm"
+
       prefix.install_metafiles
     end
   end
-end
 
+  test do
+    commit = `git rev-parse HEAD | cut -c -8`.chomp
+
+    assert_match "tm #{version} (#{commit})", shell_output("#{bin}/tm --version")
+  end
+end
