@@ -10,42 +10,22 @@ class Ensong < Formula
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/tombell/ensong").install buildpath.children
     cd "src/github.com/tombell/ensong" do
+      commit = `git rev-parse HEAD | cut -c -8`.chomp
+
       system "go", "build",
              "-o", bin/"ensong",
+             "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
              "github.com/tombell/ensong/cmd/ensong"
+
       prefix.install_metafiles
     end
   end
 
-  plist_options manual: "ensong"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>Label</key>
-        <string>#{plist_name}</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>#{opt_bin}/ensong</string>
-        </array>
-        <key>EnvironmentVariables</key>
-        <dict>
-          <key>PATH</key>
-          <string>#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin</string>
-        </dict>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>KeepAlive</key>
-        <true/>
-        <key>StandardOutPath</key>
-        <string>#{var}/log/ensong/ensong.out.log</string>
-        <key>StandardErrorPath</key>
-        <string>#{var}/log/ensong/ensong.err.log</string>
-      </dict>
-      </plist>
-    EOS
+  service do
+    run opt_bin/"ensong"
+    keep_alive true
+    log_path var/"log/ensong.log"
+    error_log_path var/"log/ensong.log"
+    environment_variables PATH: std_service_path_env
   end
 end
