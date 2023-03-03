@@ -1,7 +1,7 @@
 class Ensong < Formula
   desc "Watch directories for mixes and tracklists to upload"
   homepage "https://github.com/tombell/ensong"
-  url "https://github.com/tombell/ensong.git", tag: "v0.1.2", revision: "ee50a8f8b784adc35de08d005472c0eb5c727c43"
+  url "https://github.com/tombell/ensong.git", tag: "v0.2.0", revision: "1655850a4327b01d2d82ed44f96351545fb23041"
   head "https://github.com/tombell/ensong.git", branch: "main"
 
   depends_on "go" => :build
