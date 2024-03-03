@@ -13,7 +13,7 @@ class Ensong < Formula
     system "go", "build",
            "-o", bin/"ensong",
            "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
-           "github.com/tombell/ensong/cmd/ensong"
+           "./cmd/ensong"
 
     prefix.install_metafiles
   end
