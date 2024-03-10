@@ -1,7 +1,6 @@
 class Migrate < Formula
   desc "Database migration tool for PostgreSQL and SQLite"
   homepage "https://github.com/tombell/migrate"
-
   url "https://github.com/tombell/migrate.git", tag: "v0.0.1-alpha.1", revision: "b9a0c0cf0bb522b690eb24fdd4bc658d6cb3836e"
   head "https://github.com/tombell/migrate.git", branch: "main"
 
