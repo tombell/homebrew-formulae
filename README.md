@@ -1,4 +1,4 @@
-# Homebrew Cask Formulae
+# Homebrew Cask/Formulae
 
 [Homebrew tap][brew-tap] for formulae and casks for some of [my tools][tombell].
 
