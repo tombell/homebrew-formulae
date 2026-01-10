@@ -1,6 +1,6 @@
 cask "font-iosevka-custom" do
-  version "33.3.5"
-  sha256 "e13cf6587f1da625f374793638c4a24de250c22986987212b3e8c8adf45ac26e"
+  version "34.0.0"
+  sha256 "b16c286383c2cfcc16291e0772a4db0149e21a83670d9ce6eacecf27158b8c57"
 
   url "https://tombell-homebrew-assets.s3.us-east-1.amazonaws.com/IosevkaCustom-#{version}.zip"
   name "Iosevka Custom"
