@@ -1,7 +1,7 @@
 class TmuxManager < Formula
   desc "Opinionated tmux session manager"
   homepage "https://github.com/tombell/tm"
-  url "https://github.com/tombell/tm.git", tag: "v0.0.4", revision: "a7f31efe246c587d1dc845fff726167095fd3b6d"
+  url "https://github.com/tombell/tm.git", tag: "v0.0.5", revision: "f3f38c72e1e71d26b4cf6ffe14ea860108f239f5"
   head "https://github.com/tombell/tm.git", branch: "main"
 
   depends_on "go" => :build
@@ -10,9 +10,9 @@ class TmuxManager < Formula
     commit = `git rev-parse HEAD | cut -c -8`.chomp
 
     system "go", "build",
-           "-o", bin/"tm",
-           "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
-           "./cmd/tm"
+      "-o", bin / "tm",
+      "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
+      "./cmd/tm"
 
     prefix.install_metafiles
   end
