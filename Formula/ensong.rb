@@ -10,18 +10,18 @@ class Ensong < Formula
     commit = `git rev-parse HEAD | cut -c -8`.chomp
 
     system "go", "build",
-           "-o", bin/"ensong",
-           "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
-           "./cmd/ensong"
+      "-o", bin / "ensong",
+      "-ldflags", "-X main.Version=#{version} -X main.Commit=#{commit}",
+      "./cmd/ensong"
 
     prefix.install_metafiles
   end
 
   service do
-    run opt_bin/"ensong"
+    run opt_bin / "ensong"
     keep_alive true
-    log_path var/"log/ensong.log"
-    error_log_path var/"log/ensong.log"
+    log_path var / "log/ensong.log"
+    error_log_path var / "log/ensong.log"
     environment_variables PATH: std_service_path_env
   end
 

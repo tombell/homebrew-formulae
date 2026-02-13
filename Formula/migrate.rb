@@ -11,9 +11,9 @@ class Migrate < Formula
     cmds_package = "github.com/tombell/migrate/cmd/migrate/commands"
 
     system "go", "build",
-           "-o", bin/"migrate",
-           "-ldflags", "-X #{cmds_package}.Version=#{version} -X #{cmds_package}.Commit=#{commit}",
-           "./cmd/migrate"
+      "-o", bin / "migrate",
+      "-ldflags", "-X #{cmds_package}.Version=#{version} -X #{cmds_package}.Commit=#{commit}",
+      "./cmd/migrate"
 
     prefix.install_metafiles
   end
