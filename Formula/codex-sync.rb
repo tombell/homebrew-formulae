@@ -7,14 +7,17 @@ class CodexSync < Formula
   depends_on 'go' => :build
 
   def install
+    commit = `git rev-parse HEAD | cut -c -8`.chomp
+
     system 'go', 'build',
            '-o', bin / 'codex-sync',
+           '-ldflags', "-X main.Version=#{version} -X main.Commit=#{commit}",
            './cmd/codex-sync'
 
     prefix.install_metafiles
   end
 
   test do
-    assert_match 'codex-sync pull pyra', shell_output("#{bin}/codex-sync --help")
+    assert_match "codex-sync #{version} (", shell_output("#{bin}/codex-sync --version")
   end
 end
