@@ -3,6 +3,7 @@ class TmuxManager < Formula
   homepage 'https://github.com/tombell/tm'
 
   url 'https://github.com/tombell/tm/archive/refs/tags/v0.0.5.tar.gz'
+  sha256 'cf8deb5f8c8c19aa50b61676efd9b8ac299b954aa2e3219ea57426a8dbd098fd'
   head 'https://github.com/tombell/tm.git', branch: 'main'
 
   depends_on 'go' => :build
