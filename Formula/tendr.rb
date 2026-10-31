@@ -18,8 +18,6 @@ class Tendr < Formula
   end
 
   test do
-    commit = `git rev-parse HEAD | cut -c -8`.chomp
-
-    assert_match "tendr #{version} (#{commit})", shell_output("#{bin}/tendr --version")
+    assert_match(/^tendr #{Regexp.escape(version.to_s)} \(\h{8}\)$/, shell_output("#{bin}/tendr --version"))
   end
 end

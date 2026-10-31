@@ -21,8 +21,6 @@ class Amber < Formula
   end
 
   test do
-    commit = `git rev-parse HEAD | cut -c -8`.chomp
-
-    assert_match "amber #{version} (#{commit})", shell_output("#{bin}/amber --version")
+    assert_match(/^amber #{Regexp.escape(version.to_s)} \(\h{8}\)$/, shell_output("#{bin}/amber --version"))
   end
 end

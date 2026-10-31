@@ -21,8 +21,6 @@ class TmuxManager < Formula
   end
 
   test do
-    commit = `git rev-parse HEAD | cut -c -8`.chomp
-
-    assert_match "tm #{version} (#{commit})", shell_output("#{bin}/tm --version")
+    assert_match(/^tm #{Regexp.escape(version.to_s)} \(\h{8}\)$/, shell_output("#{bin}/tm --version"))
   end
 end
