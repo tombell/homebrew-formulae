@@ -20,6 +20,8 @@ class Amber < Formula
   end
 
   test do
-    assert_match "amber #{version} (", shell_output("#{bin}/amber --version")
+    commit = `git rev-parse HEAD | cut -c -8`.chomp
+
+    assert_match "amber #{version} (#{commit})", shell_output("#{bin}/amber --version")
   end
 end
