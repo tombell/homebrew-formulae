@@ -3,7 +3,7 @@ class TmuxManager < Formula
   homepage 'https://github.com/tombell/tm'
 
   url 'https://github.com/tombell/tm.git',
-      tag:      'v0.0.5',
+      tag: 'v0.0.5',
       revision: 'f3f38c72e1e71d26b4cf6ffe14ea860108f239f5'
   head 'https://github.com/tombell/tm.git', branch: 'main'
 
