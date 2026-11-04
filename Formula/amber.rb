@@ -7,6 +7,12 @@ class Amber < Formula
       revision: '9e9cc7314735f4a23f78b2b16e33f4c365acde06'
   head 'https://github.com/tombell/amber.git', branch: 'main'
 
+  bottle do
+    root_url 'https://github.com/tombell/amber/releases/download/v0.0.2'
+    sha256 cellar: :any_skip_relocation,
+           arm64_golden_gate: 'bde00069401c51172146c5b837743b3d84a3f666cfa13b5618000a10ad656956'
+  end
+
   depends_on 'go' => :build
 
   def install
